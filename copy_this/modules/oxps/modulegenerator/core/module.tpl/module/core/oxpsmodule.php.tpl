@@ -157,7 +157,7 @@ class [{$sModuleClassName}] extends oxModule
             $aSql = (array) explode(';', $sSql);
 
             foreach ($aSql as $sQuery) {
-                if (!empty($sQuery)) {
+                if (!empty(trim($sQuery))) {
                     $oDb->execute($sQuery);
                 }
             }
